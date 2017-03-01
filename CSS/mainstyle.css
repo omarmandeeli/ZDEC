@@ -1,3 +1,144 @@
+
+@keyframes slidy {
+0% { left: 0%; }
+20% { left: 0%; }
+25% { left: -100%; }
+45% { left: -100%; }
+50% { left: -200%; }
+70% { left: -200%; }
+75% { left: -300%; }
+95% { left: -300%; }
+100% { left: -400%; }
+}
+
+body { margin: 0; } 
+div#slider { overflow: hidden; }
+div#slider figure img { width: 20%; float: left; }
+div#slider figure { 
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 30s slidy infinite; 
+}
+#slider {
+	  background-repeat: no-repeat;
+  	  background-size: cover;
+
+}
+ @media screen and (max-width: 865px) {
+   #canvas {
+     background-image: none;
+    }    
+ }
+
+
+
+
+
+
+.text {
+  z-index: 100;
+  position: absolute;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  left: 850px;
+  top: 350px;
+}
+.text2 {
+  z-index: 100;
+  position: absolute;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  left: 890px;
+  top: 400px;
+}
+
+
+
 body {
-	background-color: blue;
+	margin: 0;
+	background: #f4f4f4;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 400;
+
+}
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+
+}
+
+header {
+  background: none;
+}
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.logo {
+background: none !important;
+  border: none !important;
+  float: left;
+  padding: 5px 900px 0 10px;
+  width:4%;
+ 
+}
+
+nav {
+  	float: right;
+    position: fixed;
+    right: 50; 
+    top: 0;
+    width: 100%;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 70px;
+  padding-top: 23px;
+
+  position: relative;
+}
+
+nav a {
+  color: #f4f4f4;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #e74c3c;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: #f4f4f4;
+
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
 }
